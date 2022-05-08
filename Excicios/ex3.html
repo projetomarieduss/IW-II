@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 03</title>
+</head>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    body {
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-size: 16px;
+    
+    color: black;
+    margin-top: auto;
+    margin: 40px;
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  h1 {
+    color: rgb(68, 43, 29);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: rgb(68, 43, 29);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    text-align: right;
+  }
+  p{
+    text-align: center; 
+    font-size: 18px;
+    color: #333;
+  }
+  
+  h2, h4, h5, h6 {
+    text-align: center;
+  }
+    </style>
+
+<body> 
+  <h3>Este programa e lê as duas notas parciais obtidas por um aluno numa disciplina ao longo de 
+    um semestre, e calcule a sua média. A atribuição de conceitos obedece à tabela abaixo:</h3>
+    <table>
+        <tr>
+          <th>Média de Aproveitamento</th>
+          <th>Conceito</th>
+       
+        </tr>
+        <tr>
+          <td>Entre 9.0 e 10.0</td>
+          <td>A</td>
+          
+        </tr>
+        <tr>
+          <td>Entre 7.5 e 9.0</td>
+          <td>B</td>
+          
+        </tr>
+        <tr>
+          <td>Entre 6.0 e 7.5</td>
+          <td>C</td>
+          
+        </tr>
+        <tr>
+          <td>Entre 4.0 e 6.0</td>
+          <td>D</td>
+         
+        </tr>
+        <tr>
+          <td>Entre 4.0 e 0</td>
+          <td>E</td>
+         
+        </tr>
+    </table>
+    Nota 1:<input id="num1" type="number"> <br/>
+    Nota 2:<input id="num2" type="number"> <br/>
+    <button onclick="media()">Calcular média</button><br />
+
+   
+
+    <div id='resposta'></div>
+
+    <script type="text/javascript">
+     function media(){ 
+    var a = parseFloat(document.getElementById("num1").value);
+    var b = parseFloat(document.getElementById("num2").value);
+    var media = (a+b)/2
+      
+if (media<=4.0){
+    //e
+       var re= alert(`Sua 1 nota: ${a}\nSua 2 nota:${b} \nSua media:${media} \nConceito correspondente é: E \nE VOCÊ FOI REPROVADO`)
+}
+if (media>4.0 && media<=6.0) {
+   //d   
+   var re=  alert(`Sua 1 nota: ${a}\nSua 2 nota:${b} \nSua media:${media} \nConceito correspondente é: D \nE VOCÊ FOI REPROVADO`)
+}
+if (media>6.0 && media<=7.5) {
+    //c
+    var re=  alert(`Sua 1 nota: ${a}\nSua 2 nota:${b} \nSua media:${media} \nConceito correspondente é: C \nE VOCÊ FOI APROVADO\n PARABÉNS`)
+}
+if (media>7.5 && media<=9.0) {
+    //b
+    var re=  alert(`Sua 1 nota: ${a}\nSua 2 nota:${b} \nSua media:${media} \nConceito correspondente é: B \nE VOCÊ FOI APROVADO \n PARABÉNS`)
+}
+if (media>9.00 && media<=10.0) {
+    //a
+    var re=  alert(`Sua 1 nota: ${a}\nSua 2 nota:${b} \nSua media:${media} \nConceito correspondente é: A \nE VOCÊ FOI APROVADO \n PARABÉNS`)
+}
+     }
+    
+   </script>
+</body>
+</html>

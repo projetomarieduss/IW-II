@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 02</title>
+</head>
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    body {
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-size: 16px;
+    
+    color: black;
+    margin-top: auto;
+    margin: 40px;
+    background-image: url('../img/fundo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  h1 {
+    color: rgb(68, 43, 29);
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 30px;
+    color: rgb(68, 43, 29);
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h3 {
+    font-size: 18px;
+    text-align: right;
+  }
+  p{
+    text-align: center; 
+    font-size: 18px;
+    color: #333;
+  }
+  
+  h2, h4, h5, h6 {
+    text-align: center;
+  }
+    </style>
+    <body>
+    <div id="container">
+        <p>Este programa recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual. </p>
+        <p>Após o salario ser informado, mostraremos:</p>
+        <ul>
+            <li> O salário antes do reajuste;</li>
+            <li>O percentual de aumento aplicado;</li>
+            <li>O valor do aumento;</li>
+            <li>O novo salário, após o aumento.</li>
+        </ul>
+        <p>Então, por favor informe seu salario:<input type="number" id="salario"></p>
+        <button onclick="ajus()">Verificar</button><br />
+        <div id='resposta'></div>
+   <script>
+    function ajus() {
+       var a = parseFloat(document.getElementById("salario").value);
+   
+       var v1 = a*0.2
+       var t1 = v1 + a 
+   
+       var v2 = a*0.15
+       var t2 = v2 + a 
+   
+       var v3 = a*0.1
+       var t3 = v3 + a 
+   
+       var v4 = a*0.05
+       var t4 = v4 + a 
+       ans = document.getElementById('resposta');
+   
+       if (a<=280.00) {
+         //aumento de 20%  
+        ans.innerHTML = `<p>Seu salário antigo: R$${a}, <br>seu aumento é de 20%, <br>seu valor de aumento: R$${v1}<br> e seu salário novo é: R$ ${t1}</p>`
+       }
+       if (a>280.00 && a<=700.00) {
+            //aumento de 15%
+            ans.innerHTML = `<p>Seu salário antigo: R$${a},<br> seu aumento é de 15%,<br> seu valor de aumento: R$${v2}<br> e seu salário novo é: R$ ${t2}</p>` 
+       } 
+   
+       if (a>700.00 && a<1500.00) {
+           //aumento de 10%
+           ans.innerHTML = `<p>Seu salário antigo: R$${a},<br> seu aumento é de 10%,<br> seu valor de aumento: R$${v3} e<br> seu salário novo é: R$ ${t3}</p>`   
+       }
+       
+       if (a>= 1500) {
+          // aumento de 5%  
+          ans.innerHTML = `<p>Seu salário antigo: R$${a},<br> seu aumento é de 05%,<br> seu valor de aumento: R$${v4}<br> e seu salário novo é: R$ ${t4}</p>`
+       }
+   }
+   </script>
+    </div>
+   
+</body>
+</html>
