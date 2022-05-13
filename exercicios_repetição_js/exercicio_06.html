@@ -1,0 +1,30 @@
+<!--6. Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro 
+número elevado ao segundo número. Não utilize a função de potência da linguagem.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    
+<script>
+    var base = Number(prompt('Informe um número para ser a base'))
+    var expoente = Number(prompt('Informe um segundo número, que será o expoente'))
+    var r = 1
+    var count
+
+    for(count = 1; count <= expoente; count++){
+        r = r * base
+    }
+
+    alert(`${base} elevado a ${expoente} é igual a ${r}`)
+ 
+
+</script>
+
+</body>
+</html>
