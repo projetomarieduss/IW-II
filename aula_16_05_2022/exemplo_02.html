@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>02</title>
+</head>
+<body>
+    <script>
+        var numeros = [5,8,10,4]
+        console.log(numeros[3])//4
+        //documente.write(numeros)//não é muito bom para mostrar separadamente
+        var tamanho = numeros.length
+        console.log('Tamanho do vetor=>',tamanho)
+
+        for (var i = 0 ; i< tamanho; i++){
+            console.log('Valor do i:',i, 'conteudo:',numeros[i])
+            
+        }
+
+          console.log('***************************')
+    
+       for (var i in numeros){
+            console.log('Valor do i:',i, 'conteudo:',numeros[i])
+            
+        }
+        console.log('***************************')
+
+        console.log(numeros.indexOf(10))//da para usar para pesquisa, pois quando ele não acha informa '-1' que da para ser substituido por 'pesquisa não encontrada'
+
+    </script>
+</body>
+</html>
