@@ -1,0 +1,25 @@
+<!--Crie um programa que solicite ao usuário quantos números ele deseja salvar.
+Em seguida, solicite os números para os usuários e armazene-os em um vetor. Mostre
+os numeros ordenados de forma crescente.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <script>        
+        var num = parseInt(prompt('Quantos números você deseja guardar?'))
+        var vetor = []
+        
+        for(var i = 0; i < num; i++){
+            
+            vetor.push(parseInt(prompt('Digite seus números:')))
+        }
+        console.log(vetor)
+        document.write(vetor)
+    </script>
+</body>
+</html>
