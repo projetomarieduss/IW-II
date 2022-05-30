@@ -1,0 +1,12 @@
+Critérios para exibição da foto:
+Até 10 anos um bebê (menina e menino)
+Até 20 anos um adolescente (menina e menino)
+Até 30 anos um adulto (menina e menino)
+
+
+Tem que pedir:
+Data de nascimento e sexo.
+
+Resposta:
+O sistema previu que você é uma menina(o) com ..  de idade.
+ 
